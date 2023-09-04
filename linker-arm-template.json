@@ -15,12 +15,12 @@
                     "name": "azureuser",
                     "secretInfo": {
                         "secretType": "rawValue",
-                        "value": "Password@1234"
+                        "value": "xxxxxxxxxxxxxxxxxxx"
                     }
                 },
                 "clientType": "none",
                 "targetService": {
-                    "id": "/subscriptions/d82d7763-8e12-4f39-a7b6-496a983ec2f4/resourceGroups/yungez-db/providers/Microsoft.DBforPostgreSQL/flexibleServers/postgresflex0904/databases/postgres",
+                    "id": "/subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/yungez-db/providers/Microsoft.DBforPostgreSQL/flexibleServers/postgresflex0904/databases/postgres",
                     "type": "AzureResource"
                 },
                 "configurationInfo": {
