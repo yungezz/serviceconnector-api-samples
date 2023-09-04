@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.ServiceLinker/linkers",
+            "apiVersion": "2022-11-01-preview",
+            "name": "psotgres_linker3",
+            "scope": "Microsoft.App/containerApps/north-europe",
+            "properties": {
+                "authInfo": {
+                    "authType": "secret",
+                    "name": "azureuser",
+                    "secretInfo": {
+                        "secretType": "rawValue",
+                        "value": "Password@1234"
+                    }
+                },
+                "clientType": "none",
+                "targetService": {
+                    "id": "/subscriptions/d82d7763-8e12-4f39-a7b6-496a983ec2f4/resourceGroups/yungez-db/providers/Microsoft.DBforPostgreSQL/flexibleServers/postgresflex0904/databases/postgres",
+                    "type": "AzureResource"
+                },
+                "configurationInfo": {
+                    "customizedKeys": {
+                        "AZURE_POSTGRESQL_HOST": "SPRINGBOARD_POSTGRES_HOST",
+                        "AZURE_POSTGRESQL_DATABASE": "SPRINGBOARD_POSTGRES_DATABASE",
+                        "AZURE_POSTGRESQL_USER": "SPRINGBOARD_POSTGRES_USER",
+                        "AZURE_POSTGRESQL_PASSWORD": "SPRINGBOARD_POSTGRES_PASSWORD",
+                        "AZURE_POSTGRESQL_PORT": "SPRINGBOARD_POSTGRES_PORT"
+                    }
+                },
+                "scope": "simple-hello-world-container"
+            }
+        }
+    ]
+}
