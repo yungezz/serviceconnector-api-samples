@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "webAppName": {
+      "value": "app1012lc"
+    },
+    "webAppInVNetName": {
+      "value": "app04191"
+    },
+    "sqlServerNameNoVNet": {
+      "value": "sql0419"
+    },
+    "sqlServerInVNetName": {
+      "value": "sql0419vnet"
+    },
+    "sqlDatabaseName": {
+      "value": "db1"
+    },
+    "sqlServerLogin": {
+      "value": "azureuser"
+    },
+    "sqlServerPassword": {
+      "value": "xxxxxxxxxxxx"
+    },
+    "appConfigName": {
+      "value": "appconfig0419"
+    }
+  }
+}
